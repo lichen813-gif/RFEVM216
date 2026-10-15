@@ -1,0 +1,122 @@
+# 2.5 Running the Demo
+
+[Switch to 中文](../../zh/rf-development-guide/06-running-the-demo.md)
+
+> This chapter is translated from the Chinese source PDF. Figures and UI screenshots retain their original labels so that they match the hardware and software.  
+> Source PDF: `RFEVM216开发板射频开发指南s.pdf`  
+> Source pages: 28-35
+
+<a id="page-28"></a>
+## Source PDF page 28
+
+Set the DAC current to be sent. 40500 (uA) is the maximum output transmit power, the minimum is 2250 uA, corresponding to a dynamic range of 25 dB  
+SettingsPtr.Attenuation = 0;  
+SettingsPtr.DisableRTS = 1;  
+uint32_t txatt_ua;  
+for (int i = 0; i < 4; i++)  
+for (int j = 0; j < 4; j++) {  
+    txatt_ua = round(40500 / pow(10, ((double)txatt[i * 2 + j] / 1000) / 20));  
+    Status = XRFdc_SetDACVOP(&RFdcInstPtr, i, j, txatt_ua);  
+    printf("tile=%d,block=%d,XRFdc_SetDACVOP=%d,Status=%d\n", i, j, txatt_ua, Status);  
+    Status = XRFdc_SetDSA(&RFdcInstPtr, i, j, &SettingsPtr);  
+    Status = XRFdc_GetDSA(&RFdcInstPtr, i, j, &SettingsPtr);  
+    Status = XRFdc_SetDither(&RFdcInstPtr, i, j, 1);  
+    printf("tile=%d,block=%d,Attenuation=%f,Status=%d\n", i, j, SettingsPtr.Attenuation, Status);  
+}  
+5) MTS synchronization  
+Perform cross-tile synchronization in RFdcDcp_Example.  
+Status = -1;  
+while (Status != XRFDC_SUCCESS) {  
+    // Status = ChangeSampleFreq(&RFdcInstPtr, sample_rate);  
+
+Status = qmc_settings(&RFdcInstPtr, XRFDC_ADC_TILE);  
+mdelay(100);  
+Status = RFdcDcp_Example(&RFdcInstPtr, &lmk04828_spi);  
+if (Status != XRFDC_SUCCESS) {  
+    printf("RFdcDcp initial failed\n");  
+}  
+}  
+
+2.5 Running the demo routine  
+1) Connect the 12V DC power supply, plug in the Type-C debug cable, and power on the board;  
+2) Run the application directly in Vitis;
+
+---
+
+<a id="page-29"></a>
+## Source PDF page 29
+
+Note: Vitis projects are quite sensitive to paths. When a Vitis project is copied to another path, compilation or downloading may show some errors. A simple solution is to delete the rfevm216_plf in Vitis, create a new platform with the name rfevm216_plf, and use the default parameters. For the XSA file, select the file under the project.  
+
+3) Open the serial debug terminal, with the serial port configured as: baud rate 115200, 8 data bits, 1 start bit, 1 stop bit;  
+The serial output information is as follows:
+
+### Figures
+
+![RFEVM216 Development Board RF Development Guide, page 29, figure 1](../../assets/rf-development-guide/page-029-image-01.jpg)
+
+---
+
+<a id="page-30"></a>
+## Source PDF page 30
+
+[No extractable text on this page.]
+
+### Figures
+
+![RFEVM216 Development Board RF Development Guide, page 30, figure 1](../../assets/rf-development-guide/page-030-image-01.jpg)
+
+---
+
+<a id="page-31"></a>
+## Source PDF page 31
+
+[No extractable text on this page.]
+
+### Figures
+
+![RFEVM216 Development Board RF Development Guide, page 31, figure 1](../../assets/rf-development-guide/page-031-image-01.jpg)
+
+---
+
+<a id="page-32"></a>
+## Source PDF page 32
+
+[No extractable text on this page.]
+
+### Figures
+
+![RFEVM216 Development Board RF Development Guide, page 32, figure 1](../../assets/rf-development-guide/page-032-image-01.jpg)
+
+---
+
+<a id="page-33"></a>
+## Source PDF page 33
+
+[No extractable text on this page.]
+
+### Figures
+
+![RFEVM216 Development Board RF Development Guide, page 33, figure 1](../../assets/rf-development-guide/page-033-image-01.jpg)
+
+---
+
+<a id="page-34"></a>
+## Source PDF page 34
+
+4) Loop back TX0 and RX0 through the loopback RF cable, and observe the RF loopback results through Chipscope
+
+### Figures
+
+![RFEVM216 Development Board RF Development Guide, page 34, figure 1](../../assets/rf-development-guide/page-034-image-01.jpg)
+
+---
+
+<a id="page-35"></a>
+## Source PDF page 35
+
+Note: The sampling points of each channel were observed here.
+
+### Figures
+
+![RFEVM216 Development Board RF Development Guide, page 35, figure 1](../../assets/rf-development-guide/page-035-image-01.jpg)

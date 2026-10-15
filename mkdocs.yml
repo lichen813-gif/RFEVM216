@@ -1,0 +1,103 @@
+site_name: RFEVM216 Documentation
+site_description: English-first bilingual documentation and reference examples for the RFEVM216 RFSoC development platform
+site_url: https://lichen813-gif.github.io/RFEVM216/
+repo_url: https://github.com/lichen813-gif/RFEVM216
+repo_name: lichen813-gif/RFEVM216
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search:
+      lang:
+        - en
+        - zh
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - English:
+      - Overview: en/index.md
+      - User Guide:
+          - Overview: en/user-guide/index.md
+          - Front Matter: en/user-guide/00-front-matter.md
+          - 1. Introduction: en/user-guide/01-introduction.md
+          - 2. RFSOM216 SoM Board: en/user-guide/02-som-board.md
+          - 3. Carrier Board: en/user-guide/03-carrier-board.md
+      - FPGA Tutorial:
+          - Overview: en/fpga-tutorial/index.md
+          - Front Matter: en/fpga-tutorial/00-front-matter.md
+          - 1. Board Introduction: en/fpga-tutorial/01-board-introduction.md
+          - 2. Environment Setup: en/fpga-tutorial/02-environment-setup.md
+          - 3. PL Peripherals: en/fpga-tutorial/03-pl-peripherals.md
+          - 4. PS Peripherals: en/fpga-tutorial/04-ps-peripherals.md
+          - 5. PS-PL Interconnect: en/fpga-tutorial/05-ps-pl-interconnect.md
+          - 6. FAQs: en/fpga-tutorial/06-faqs.md
+      - RF Development Guide:
+          - Overview: en/rf-development-guide/index.md
+          - Front Matter: en/rf-development-guide/00-front-matter.md
+          - 1. Introduction and Workflow: en/rf-development-guide/01-introduction.md
+          - 2.1 Clock Architecture: en/rf-development-guide/02-clock-architecture.md
+          - 2.2 RFDC Configuration: en/rf-development-guide/03-rfdc-configuration.md
+          - 2.3 FPGA Hardware Project: en/rf-development-guide/04-fpga-hardware-project.md
+          - 2.4 Bare-Metal Application: en/rf-development-guide/05-bare-metal-application.md
+          - 2.5 Running the Demo: en/rf-development-guide/06-running-the-demo.md
+          - Appendix A - API Reference: en/rf-development-guide/07-api-reference.md
+  - 中文:
+      - 文档总览: zh/index.md
+      - 用户手册:
+          - 总览: zh/user-guide/index.md
+          - 前置内容: zh/user-guide/00-front-matter.md
+          - 1. 简介: zh/user-guide/01-introduction.md
+          - 2. RFSOM216 核心板: zh/user-guide/02-som-board.md
+          - 3. 载板: zh/user-guide/03-carrier-board.md
+      - FPGA 教程:
+          - 总览: zh/fpga-tutorial/index.md
+          - 前置内容: zh/fpga-tutorial/00-front-matter.md
+          - 1. 开发板简介: zh/fpga-tutorial/01-board-introduction.md
+          - 2. 实验环境搭建: zh/fpga-tutorial/02-environment-setup.md
+          - 3. PL 端外设: zh/fpga-tutorial/03-pl-peripherals.md
+          - 4. PS 端外设: zh/fpga-tutorial/04-ps-peripherals.md
+          - 5. PS 与 PL 互联: zh/fpga-tutorial/05-ps-pl-interconnect.md
+          - 6. 常见问题: zh/fpga-tutorial/06-faqs.md
+      - 射频开发指南:
+          - 总览: zh/rf-development-guide/index.md
+          - 前置内容: zh/rf-development-guide/00-front-matter.md
+          - 1. 简介与开发流程: zh/rf-development-guide/01-introduction.md
+          - 2.1 时钟架构: zh/rf-development-guide/02-clock-architecture.md
+          - 2.2 RF 数据转换器配置: zh/rf-development-guide/03-rfdc-configuration.md
+          - 2.3 FPGA 硬件工程: zh/rf-development-guide/04-fpga-hardware-project.md
+          - 2.4 裸机应用程序: zh/rf-development-guide/05-bare-metal-application.md
+          - 2.5 运行 Demo: zh/rf-development-guide/06-running-the-demo.md
+          - 附录 A - API 介绍: zh/rf-development-guide/07-api-reference.md
+  - Examples: examples.md
