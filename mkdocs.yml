@@ -59,9 +59,27 @@ nav:
           - Overview: en/fpga-tutorial/index.md
           - 1. Board Introduction: en/fpga-tutorial/01-board-introduction.md
           - 2. Environment Setup: en/fpga-tutorial/02-environment-setup.md
-          - 3. PL Peripherals: en/fpga-tutorial/03-pl-peripherals.md
-          - 4. PS Peripherals: en/fpga-tutorial/04-ps-peripherals.md
-          - 5. PS-PL Interconnect: en/fpga-tutorial/05-ps-pl-interconnect.md
+          - 3. PL Peripherals:
+              - Overview: en/fpga-tutorial/03-pl-peripherals/index.md
+              - 3.1 LED Breathing Light: en/fpga-tutorial/03-pl-peripherals/01-led-breathing-light.md
+              - 3.2 PL DDR4 Read/Write: en/fpga-tutorial/03-pl-peripherals/02-pl-ddr4.md
+              - 3.3 GTY IBERT Test: en/fpga-tutorial/03-pl-peripherals/03-gty-ibert.md
+          - 4. PS Peripherals:
+              - Overview: en/fpga-tutorial/04-ps-peripherals/index.md
+              - 4.1 IPI Design: en/fpga-tutorial/04-ps-peripherals/01-ipi-design.md
+              - 4.2 ARM Hello World: en/fpga-tutorial/04-ps-peripherals/02-arm-hello-world.md
+              - 4.3 RTC Interrupt: en/fpga-tutorial/04-ps-peripherals/03-rtc-interrupt.md
+              - 4.4 PS IIC: en/fpga-tutorial/04-ps-peripherals/04-iic.md
+              - 4.5 lwIP Ethernet: en/fpga-tutorial/04-ps-peripherals/05-lwip-ethernet.md
+              - 4.6 DisplayPort: en/fpga-tutorial/04-ps-peripherals/06-displayport.md
+              - 4.7 SD Card Read/Write: en/fpga-tutorial/04-ps-peripherals/07-sd-card.md
+              - 4.8 USB Slave: en/fpga-tutorial/04-ps-peripherals/08-usb-slave.md
+          - 5. PS-PL Interconnect:
+              - Overview: en/fpga-tutorial/05-ps-pl-interconnect/index.md
+              - 5.1 PS EMIO: en/fpga-tutorial/05-ps-pl-interconnect/01-emio.md
+              - 5.2 PL AXI GPIO: en/fpga-tutorial/05-ps-pl-interconnect/02-axi-gpio.md
+              - 5.3 PL Register Access: en/fpga-tutorial/05-ps-pl-interconnect/03-pl-register-access.md
+              - 5.4 AXI-DMA Loopback: en/fpga-tutorial/05-ps-pl-interconnect/04-axi-dma-loopback.md
           - 6. FAQs: en/fpga-tutorial/06-faqs.md
       - RF Development Guide:
           - Overview: en/rf-development-guide/index.md
@@ -84,9 +102,27 @@ nav:
           - 总览: zh/fpga-tutorial/index.md
           - 1. 开发板简介: zh/fpga-tutorial/01-board-introduction.md
           - 2. 实验环境搭建: zh/fpga-tutorial/02-environment-setup.md
-          - 3. PL 端外设: zh/fpga-tutorial/03-pl-peripherals.md
-          - 4. PS 端外设: zh/fpga-tutorial/04-ps-peripherals.md
-          - 5. PS 与 PL 互联: zh/fpga-tutorial/05-ps-pl-interconnect.md
+          - 3. PL 端外设:
+              - 总览: zh/fpga-tutorial/03-pl-peripherals/index.md
+              - 3.1 LED 呼吸灯实验: zh/fpga-tutorial/03-pl-peripherals/01-led-breathing-light.md
+              - 3.2 PL 端 DDR4 读写实验: zh/fpga-tutorial/03-pl-peripherals/02-pl-ddr4.md
+              - 3.3 GTY IBERT 测试: zh/fpga-tutorial/03-pl-peripherals/03-gty-ibert.md
+          - 4. PS 端外设:
+              - 总览: zh/fpga-tutorial/04-ps-peripherals/index.md
+              - 4.1 IPI 设计建立: zh/fpga-tutorial/04-ps-peripherals/01-ipi-design.md
+              - 4.2 ARM Hello World: zh/fpga-tutorial/04-ps-peripherals/02-arm-hello-world.md
+              - 4.3 PS 端 RTC 中断实验: zh/fpga-tutorial/04-ps-peripherals/03-rtc-interrupt.md
+              - 4.4 PS 端 IIC: zh/fpga-tutorial/04-ps-peripherals/04-iic.md
+              - 4.5 PS 端 lwIP 以太网: zh/fpga-tutorial/04-ps-peripherals/05-lwip-ethernet.md
+              - 4.6 DisplayPort: zh/fpga-tutorial/04-ps-peripherals/06-displayport.md
+              - 4.7 SD 卡读写: zh/fpga-tutorial/04-ps-peripherals/07-sd-card.md
+              - 4.8 USB Slave: zh/fpga-tutorial/04-ps-peripherals/08-usb-slave.md
+          - 5. PS 与 PL 互联:
+              - 总览: zh/fpga-tutorial/05-ps-pl-interconnect/index.md
+              - 5.1 PS 端 EMIO: zh/fpga-tutorial/05-ps-pl-interconnect/01-emio.md
+              - 5.2 PL 端 AXI GPIO: zh/fpga-tutorial/05-ps-pl-interconnect/02-axi-gpio.md
+              - 5.3 PS 端读写 PL 寄存器: zh/fpga-tutorial/05-ps-pl-interconnect/03-pl-register-access.md
+              - 5.4 AXI-DMA 环回测试: zh/fpga-tutorial/05-ps-pl-interconnect/04-axi-dma-loopback.md
           - 6. 常见问题: zh/fpga-tutorial/06-faqs.md
       - 射频开发指南:
           - 总览: zh/rf-development-guide/index.md
