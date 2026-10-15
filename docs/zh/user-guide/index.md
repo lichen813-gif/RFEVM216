@@ -9,3 +9,4 @@
 - [1. 简介](01-introduction.md)
 - [2. RFSOM216 核心板](02-som-board.md)
 - [3. 载板](03-carrier-board.md)
+- [管脚映射参考](04-pin-mapping.md)

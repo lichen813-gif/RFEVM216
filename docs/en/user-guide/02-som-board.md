@@ -2,6 +2,8 @@
 
 [Switch to 中文](../../zh/user-guide/02-som-board.md)
 
+For searchable QSPI, eMMC, and EEPROM signal tables, see the [Pin Mapping Reference](04-pin-mapping.md#som-pin-mapping).
+
 - Button
 
 A reset button.

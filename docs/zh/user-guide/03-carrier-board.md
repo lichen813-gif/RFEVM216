@@ -2,6 +2,8 @@
 
 [Switch to English](../../en/user-guide/03-carrier-board.md)
 
+载板接口与连接器的可检索表格请参阅[管脚映射参考](04-pin-mapping.md#carrier-pin-mapping)。
+
 ## 3.1 简介
 
 通过前面的功能介绍，我们可以了解到载板的部分功能

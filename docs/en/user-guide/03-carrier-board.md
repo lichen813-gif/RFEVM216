@@ -2,6 +2,8 @@
 
 [Switch to 中文](../../zh/user-guide/03-carrier-board.md)
 
+For searchable interface and connector tables, see the [Pin Mapping Reference](04-pin-mapping.md#carrier-pin-mapping).
+
 ## 3.1 Introduction
 
 The carrier board provides:

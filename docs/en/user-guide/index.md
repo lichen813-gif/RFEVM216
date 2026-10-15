@@ -9,3 +9,4 @@ Use this guide to learn the platform architecture, the RFSOM216 SoM, and the RFE
 - [1. Introduction](01-introduction.md)
 - [2. RFSOM216 SoM Board](02-som-board.md)
 - [3. Carrier Board](03-carrier-board.md)
+- [Pin Mapping Reference](04-pin-mapping.md)

@@ -2,6 +2,8 @@
 
 [Switch to English](../../en/user-guide/02-som-board.md)
 
+QSPI、eMMC 和 EEPROM 的可检索信号表格请参阅[管脚映射参考](04-pin-mapping.md#som-pin-mapping)。
+
 - 按键
 
 一个复位按键。

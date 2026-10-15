@@ -41,6 +41,7 @@ plugins:
 markdown_extensions:
   - attr_list
   - md_in_html
+  - tables
   - toc:
       permalink: true
 
@@ -53,6 +54,7 @@ nav:
           - 1. Introduction: en/user-guide/01-introduction.md
           - 2. RFSOM216 SoM Board: en/user-guide/02-som-board.md
           - 3. Carrier Board: en/user-guide/03-carrier-board.md
+          - Pin Mapping Reference: en/user-guide/04-pin-mapping.md
       - FPGA Tutorial:
           - Overview: en/fpga-tutorial/index.md
           - 1. Board Introduction: en/fpga-tutorial/01-board-introduction.md
@@ -77,6 +79,7 @@ nav:
           - 1. 简介: zh/user-guide/01-introduction.md
           - 2. RFSOM216 核心板: zh/user-guide/02-som-board.md
           - 3. 载板: zh/user-guide/03-carrier-board.md
+          - 管脚映射参考: zh/user-guide/04-pin-mapping.md
       - FPGA 教程:
           - 总览: zh/fpga-tutorial/index.md
           - 1. 开发板简介: zh/fpga-tutorial/01-board-introduction.md
